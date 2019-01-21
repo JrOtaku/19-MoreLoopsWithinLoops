@@ -6,16 +6,16 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
          and Emily Guajardo.
 """  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+import math
 
 def main():
     """ Calls the other functions to test them. """
-    run_test_triangle_right_justified()
-    run_test_triangle_upside_down()
+    # run_test_triangle_right_justified()
+    # run_test_triangle_upside_down()
     run_test_vee()
-    run_test_numbers_constant_forward()
-    run_test_numbers_constant_backwards()
-    run_test_numbers_increasing_forward()
+    # run_test_numbers_constant_forward()
+    # run_test_numbers_constant_backwards()
+    # run_test_numbers_increasing_forward()
 
 
 def run_test_triangle_right_justified():
@@ -55,8 +55,15 @@ def triangle_right_justified(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for j in range(r):
+        for k in range(r):
+            if k > (r-(j+2)):
+                print(r-k, end='')
+            else:
+                print(' ', end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -109,8 +116,15 @@ def triangle_upside_down(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for j in range(r):
+        for k in range(r):
+            if k >= j:
+                print(k + 1, end='')
+            else:
+                print(' ', end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -160,6 +174,15 @@ def vee(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for j in range(r):
+        for k in range(-r, r+1):
+            if k == 0:
+                print('-', end='')
+            elif abs(k) > j:
+                print(abs(k), end='')
+            else:
+                print('*', end='')
+        print()
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #          Some tests are already written for you (above).
@@ -216,8 +239,13 @@ def numbers_constant_forward(r, maxnum, n):
 
     Preconditions:  r, maxnum and n are positive integers.
     """
+    for j in range(r):
+        for k in range(maxnum):
+            print(n*str(k+1), end='')
+            print(' ', end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -260,8 +288,13 @@ def numbers_constant_backwards(r, maxnum, n):
        777 666 555 444 333 222 111
     Preconditions:  r, maxnum and n are positive integers.
     """
+    for j in range(r):
+        for k in range(maxnum):
+            print(n*str(maxnum - k), end='')
+            print(' ', end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -312,8 +345,13 @@ def numbers_increasing_forward(r, maxnum):
 
     Preconditions:  r and maxnum are positive integers.
     """
+    for j in range(r):
+        for k in range(maxnum):
+            print((k+1)*str(k+1), end='')
+            print(' ', end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # Done: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
