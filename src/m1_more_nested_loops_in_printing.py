@@ -175,14 +175,17 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     for j in range(r):
-        for k in range(-r, r+1):
-            if k == 0:
-                print('-', end='')
-            elif abs(k) > j:
-                print(abs(k), end='')
-            else:
-                print('*', end='')
+        for k in range(j):
+            print('*', end='')
+        for k in range(j, r):
+            print(k, end='')
+        print('-', end='')
+        for k in range(r, 2*r-j):
+            print('x', end='')
+        for k in range(2*r-j, 2*r):
+            print('*', end='')
         print()
+    # make 5 for loops inside j
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #          Some tests are already written for you (above).
