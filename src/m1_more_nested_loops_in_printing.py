@@ -178,10 +178,10 @@ def vee(r):
         for k in range(j):
             print('*', end='')
         for k in range(j, r):
-            print(k, end='')
+            print(k+1-j, end='')
         print('-', end='')
         for k in range(r, 2*r-j):
-            print('x', end='')
+            print(2*r-k-j, end='')
         for k in range(2*r-j, 2*r):
             print('*', end='')
         print()
