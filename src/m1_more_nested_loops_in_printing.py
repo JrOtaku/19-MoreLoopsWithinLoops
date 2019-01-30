@@ -185,9 +185,8 @@ def vee(r):
         for k in range(2*r-j, 2*r):
             print('*', end='')
         print()
-    # make 5 for loops inside j
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
